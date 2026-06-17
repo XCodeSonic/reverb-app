@@ -180,7 +180,8 @@ function DoorCard({ door, status, loading, onToggle, delay, showButton = true }:
                     whileHover={{ scale: 1.06, y: -2 }}
                     onClick={() => onToggle(door.id, rattle)}
                     disabled={loading}
-                    className={`w-20 rounded-lg py-1.5 text-center text-sm font-semibold text-white shadow transition-colors disabled:opacity-50 ${status === 'open' ? 'bg-red-500 hover:bg-red-600' : 'bg-green-600 hover:bg-green-700'}`}
+                    // className={`w-20 rounded-lg py-1.5 text-center text-sm font-semibold text-white shadow transition-colors disabled:opacity-50 ${status === 'open' ? 'bg-red-500 hover:bg-red-600' : 'bg-green-600 hover:bg-green-700'}`}
+                    className={`w-20 cursor-pointer rounded-lg py-1.5 text-center text-sm font-semibold text-white shadow transition-colors disabled:opacity-50 ${status === 'open' ? 'bg-red-500 hover:bg-red-600' : 'bg-green-600 hover:bg-green-700'}`}
                 >
                     {loading ? '...' : status === 'open' ? 'Close' : 'Open'}
                 </motion.button>

@@ -91,7 +91,8 @@ export default function DoorControl() {
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.04, y: -2 }}
                     onClick={() => DOORS.forEach(d => statuses[d.id] === 'closed' && handleToggle(d.id))}
-                    className="rounded-xl bg-green-600 px-6 py-2 font-semibold text-white shadow hover:bg-green-700 transition-colors"
+                    // className="rounded-xl bg-green-600 px-6 py-2 font-semibold text-white shadow hover:bg-green-700 transition-colors"
+                    className="cursor-pointer rounded-xl bg-green-600 px-6 py-2 font-semibold text-white shadow hover:bg-green-700 transition-colors"
                 >
                     Open All
                 </motion.button>
@@ -99,7 +100,8 @@ export default function DoorControl() {
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.04, y: -2 }}
                     onClick={() => DOORS.forEach(d => statuses[d.id] === 'open' && handleToggle(d.id))}
-                    className="rounded-xl bg-red-500 px-6 py-2 font-semibold text-white shadow hover:bg-red-600 transition-colors"
+                    // className="rounded-xl bg-red-500 px-6 py-2 font-semibold text-white shadow hover:bg-red-600 transition-colors"
+                    className="cursor-pointer rounded-xl bg-red-500 px-6 py-2 font-semibold text-white shadow hover:bg-red-600 transition-colors"
                 >
                     Close All
                 </motion.button>
@@ -145,7 +147,10 @@ function ControlCard({ door, status, loading, onToggle, delay }: ControlCardProp
                 whileHover={{ scale: 1.06, y: -2 }}
                 onClick={() => onToggle(door.id)}
                 disabled={loading}
-                className={`w-20 rounded-lg py-1.5 text-center text-sm font-semibold text-white shadow transition-colors disabled:opacity-50 ${
+                // className={`w-20 rounded-lg py-1.5 text-center text-sm font-semibold text-white shadow transition-colors disabled:opacity-50 ${
+                //     status === 'open' ? 'bg-red-500 hover:bg-red-600' : 'bg-green-600 hover:bg-green-700'
+                // }`}
+                className={`w-20 cursor-pointer rounded-lg py-1.5 text-center text-sm font-semibold text-white shadow transition-colors disabled:opacity-50 ${
                     status === 'open' ? 'bg-red-500 hover:bg-red-600' : 'bg-green-600 hover:bg-green-700'
                 }`}
             >
